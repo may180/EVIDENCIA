@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+/* test*/
+
+body {
+    background-color: #ffa1cd;
+    background-image: url(fondo.jpg);
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(248, 8, 8, 0.719);
+    margin-bottom: 20px;
+}
+
+/*Sirve para centrar el contenido*/
+.wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    /*Lo que no cabe en el div no aparece, ver propiedad css overflow*/
+}
+
+header .logo {
+    color: #CFC9C8;
+    font-size: 50px;
+    line-height: 200px;
+    float: left;
+}
+
+header nav {
+    float: right;
+    line-height: 200px;
+}
+
+header nav a {
+    display: inline-block;
+    /*NPI*/
+    color: #CFC9C8;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 100ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+
+
+/*Hace que el header se quede en pantalla*/
+.header2 {
+    position: fixed;
+    height: 100px;
+}
+
+/*Propiedades del logo del header*/
+.header2 .logo {
+    line-height: 100px;
+    font-size: 20px;
+}
+
+.header2 nav {
+    line-height: 100px;
+    font-size: 20px;
+}
+
+.content p {
+    margin-bottom: 1em;
+    color:#ebe5e5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.content h2 {
+    color:#61E1F8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.content h1 {
+    color:#61E1F8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Centra el contenido que se encuentra en el header*/
+@media screen and (max-width:1050px) {
+
+    header .logo,
+    header nav {
+        width: 100%;
+        text-align: center;
+        line-height: 75px;
+    }
+}
+
+.header2 {
+    height: auto;
+}
+
+.header2 .logo,
+.header2 nav {
+    line-height: 50px;
+}
+
+.btn {
+    width: 6.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   button:hover {
+    color: black;
+   }
+   
+   button:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+
+
+.body {
+    /* background: black; */
+    font-family: 'Oxanium', sans-serif;
+    font-size: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 20px;
+    z-index: 2;
+    display: none;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+.body h2 {
+    color: white;
+    font-size: 1.65em;
+    line-height: 1.1;
+
+}
+
+.profile h2 {
+    font-size: 2em;
+}
+
+.body h2,
+p,
+th {
+    font-family: 'Cute Font', sans-serif;
+    text-transform: uppercase;
+}
+
+.body h2,
+p,
+table {
+    text-align: center;
+    color: white;
+}
+
+.body p,
+th {
+    font-size: 1.3em;
+}
+
+.body th {
+    color: #02bd27;
+    background-color: #000;
+}
+
+.calories div {
+    font-size: 0.9em;
+}
+
+.body tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.body tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.body table,
+tr,
+th,
+td {
+    border: none;
+}
+
+.body table {
+    width: 100%;
+}
+
+.body th,
+td {
+    padding: 0.3em 0.75em;
+}
+
+.body ul {
+    list-style: none;
+}
+
+.body li {
+    margin: 0.25em auto;
+}
+
+.calories div {
+    padding: 0.25em 0.5em;
+}
+
+.dashboard {
+    background: rgb(76, 162, 233);
+    background-image: repeating-linear-gradient(to bottom,
+            #43a7c9 5%,
+            rgb(39, 115, 140) 6%);
+    width: 100%;
+    /* Cambiado a 100% para ocupar toda la pantalla */
+    min-height: auto;
+    padding: 2.5%;
+    border: 0.75em double #000;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em 0em #08240d;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    align-items: center;
+    gap: 1em;
+}
+
+.schedule-table {
+    width: 100%;
+    /* Cambiado a 100% para ocupar toda la pantalla */
+    grid-row: auto;
+    /* Se quita la restricción de fila */
+    align-self: stretch;
+    /* Se expande para ocupar el espacio disponible */
+}

@@ -1,0 +1,114 @@
+
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: #000;
+    font-size: 1.65em;
+    line-height: 1.1;
+}
+
+.profile h2 {
+    font-size: 2em;
+}
+
+h2,
+p,
+th {
+    font-family: 'Cute Font', sans-serif;
+    text-transform: uppercase;
+}
+
+h2,
+p,
+table {
+    text-align: center;
+}
+
+p,
+th {
+    font-size: 1.3em;
+}
+
+th {
+    color: #02bd27;
+    background-color: #000;
+}
+
+
+.calories div {
+    font-size: 0.9em;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+table,
+tr,
+th,
+td {
+    border: none;
+}
+
+table {
+    width: 100%;
+}
+
+th,
+td {
+    padding: 0.3em 0.75em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 0.25em auto;
+}
+
+li,
+.calories div {
+    padding: 0.25em 0.5em;
+}
+
+.dashboard {
+    background: #113017;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        #113017 5%,
+        #08240d 6%
+    );
+    width: 100%; /* Cambiado a 100% para ocupar toda la pantalla */
+    min-height: 100vh;
+    padding: 2.5%;
+    border: 0.75em double #000;
+    border-radius: 1em;
+    box-shadow: 0.2em 0.2em 0em #08240d;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    align-items: center;
+    gap: 1em;
+}
+
+.schedule-table {
+    width: 100%; /* Cambiado a 100% para ocupar toda la pantalla */
+    grid-row: auto; /* Se quita la restricción de fila */
+    align-self: stretch; /* Se expande para ocupar el espacio disponible */
+}

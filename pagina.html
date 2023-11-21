@@ -1,0 +1,121 @@
+<body>
+    <header>
+        <div class="wrapper">
+            
+            <link rel="stylesheet" href="css.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Oxanium&display=swap"
+                rel="stylesheet">
+            <nav>
+                <a href="blogpost.html">
+                    <button class="btn">volver</button>
+                  </a>
+                <button class="btn" onclick="">mapa conceptual</button>
+                <button class="btn" onclick="abrir()">cuadro comparativo</button>
+                <button class="btn" onclick="cerrar()">principal</button>
+                
+            </nav>
+            <div>
+
+    </header>
+
+    <section class="content wrapper" id="seccion1">
+        <div class="contenedor">
+
+
+            <h2>¿Qué son clases en React?</h2>
+            <p>
+                En React, las clases son un concepto fundamental para la creación de componentes. Un componente en React
+                puede ser creado como una clase o como una función. Las clases en React son parte del enfoque de
+                programación orientada a objetos (OOP) y se utilizan para definir componentes con estado.
+
+                Un componente de clase en React es una clase de JavaScript que extiende la clase `React.Component`. Esta
+                clase tiene un método obligatorio llamado `render()`, que define la estructura del componente. Además,
+                las
+                clases en React pueden tener un estado (`state`) y métodos de ciclo de vida, que permiten controlar el
+                comportamiento del componente en diferentes etapas de su existencia.
+
+                Sin embargo, es importante señalar que con la introducción de los "hooks" en React 16.8, la creación de
+                componentes con funciones se ha vuelto más común y es la práctica recomendada en la mayoría de los
+                casos.
+                Los hooks proporcionan una forma más concisa y flexible de gestionar el estado y otros aspectos de los
+                componentes sin la necesidad de clases.
+
+                En resumen, las clases en React son utilizadas para definir componentes con estado y métodos de ciclo de
+                vida, pero en la actualidad se prefiere la creación de componentes mediante funciones y el uso de hooks.
+            </p>
+            <h2>Principales eventos de React</h2>
+            <p>
+                Claro, sin proporcionar código, puedo resumir los eventos principales en React de la siguiente manera:
+            <p>
+                1. onClick: Se activa cuando se hace clic en un elemento.
+            </p>
+            <p>
+                2. onChange: Se activa cuando el valor de un elemento de formulario cambia.
+            </p>
+            <p>
+                3. onSubmit: Se activa cuando se envía un formulario.
+            </p>
+            <p>
+                4. onMouseOver y onMouseOut: Se activan cuando el puntero del ratón entra o sale de un elemento.
+            </p>
+            <p>
+                5. onKeyDown, onKeyPress y onKeyUp: Se activan al presionar, mantener presionadas o soltar teclas.
+            </p>
+            <p>
+                6. onLoad y onError: Se utilizan en elementos `img` y `script` para manejar eventos de carga y error.
+            </p>
+                <p>
+                    <h1>mapa conceptual</h1>
+                    <p><img src="(Inglés) (1).png" width="70%" alt="mapa "></p>
+                </p>
+            
+
+        </div>
+    </section>
+    <div class="body" id="seccion2">
+        <div class="dashboard">
+
+
+            <div class="schedule-table" >
+                <h2>Cuadro Comparativo entre React y JSX</h2>
+                <table>
+                    <tr>
+                        <th>Característica </th>
+                        <th>React</th>
+                        <th>JSX</th>
+                    </tr>
+                    <tr>
+                        <td>Definición</td>
+                        <td>Biblioteca de JavaScript para construir interfaces de usuario</td>
+                        <td>Extensión de JavaScript que permite escribir código similar a XML/HTML para definir
+                            elementos de
+                            interfaz de usuario en React</td>
+                    </tr>
+                    <tr>
+                        <td>Tipo de tecnología</td>
+                        <td>Biblioteca</td>
+                        <td>Extensión de lenguaje</td>
+                    </tr>
+                    <tr>
+                        <td>Propósito principal</td>
+                        <td>Facilitar la construcción de interfaces de usuario interactivas</td>
+                        <td>Sintaxis más legible y concisa para definir elementos de interfaz de usuario en React</td>
+                    </tr>
+                    <tr>
+                        <td>Sintaxis</td>
+                        <td>JavaScript puro</td>
+                        <td>Similar a XML/HTML, pero integrado con JavaScript mediante Babel u otro compilador JSX</td>
+                    </tr>
+                    <tr>
+                        <td>Uso común </td>
+                        <td>Desarrollo de aplicaciones web de una sola página (SPA) </td>
+                        <td>En el desarrollo de interfaces de usuario con React</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
