@@ -26,3 +26,21 @@ function cerrar() {
         container2.style.display = "none";
     }
 }
+
+let idiomaActual = 'es';
+
+function cambiarIdioma() {
+    idiomaActual = idiomaActual === 'es' ? 'en' : 'es';
+    document.getElementById('htmlIdioma').lang = idiomaActual;
+    actualizarContenido();
+}
+
+function actualizarContenido() {
+    const elementos = document.querySelectorAll('[data-traduccion]');
+
+    elementos.forEach(elemento => {
+        const traduccionKey = elemento.dataset.traduccion;
+        elemento.textContent = traducciones[traduccionKey][idiomaActual];
+    });
+}
+

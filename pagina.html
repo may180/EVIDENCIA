@@ -1,29 +1,71 @@
+<!DOCTYPE html>
+<html lang="es" id="htmlIdioma">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Oxanium&display=swap" rel="stylesheet">
+</head>
 <body>
     <header>
         <div class="wrapper">
-            
             <link rel="stylesheet" href="css.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Oxanium&display=swap"
                 rel="stylesheet">
             <nav>
-                <a href="blogpost.html">
+                <a href="index.html">
                     <button class="btn">volver</button>
-                  </a>
-                <button class="btn" onclick="">mapa conceptual</button>
-                <button class="btn" onclick="abrir()">cuadro comparativo</button>
-                <button class="btn" onclick="cerrar()">principal</button>
-                
-            </nav>
-            <div>
+                </a>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        var contrastBtn = document.getElementById("toggle-contrast-btn");
 
+                        contrastBtn.addEventListener("click", function () {
+                            document.body.classList.toggle("high-contrast");
+                        });
+
+                        var currentZoom = 1.0;
+                        var zoomStep = 0.2;
+
+                        var zoomInBtn = document.getElementById("zoom-in-btn");
+
+                        zoomInBtn.addEventListener("click", function () {
+
+                            currentZoom += zoomStep;
+                            applyZoom();
+                        });
+
+                        var zoomOutBtn = document.getElementById("zoom-out-btn");
+
+                        zoomOutBtn.addEventListener("click", function () {
+
+                            currentZoom -= zoomStep;
+                            applyZoom();
+                        });
+                        function applyZoom() {
+                            document.body.style.transform = "scale(" + currentZoom + ")";
+                        }
+                    });
+                </script>
+</body>
+
+</html>
+<button class="btn" id="toggle-contrast-btn">Contraste</button>
+<button class="btn" onclick="abrir()">cuadro comparativo</button>
+<button class="btn" onclick="cerrar()">principal</button>
+
+</nav>
+<div>
     </header>
 
     <section class="content wrapper" id="seccion1">
         <div class="contenedor">
-
-
             <h2>¿Qué son clases en React?</h2>
             <p>
                 En React, las clases son un concepto fundamental para la creación de componentes. Un componente en React
@@ -44,8 +86,8 @@
 
                 En resumen, las clases en React son utilizadas para definir componentes con estado y métodos de ciclo de
                 vida, pero en la actualidad se prefiere la creación de componentes mediante funciones y el uso de hooks.
-                	
-            <a  href="Qué son clases en React.pdf" download="mi-archivo.pdf"> <button class="hola">pdf</button></a>
+
+                <a href="Qué son clases en React.pdf" download="mi-archivo.pdf"> <button class="hola">pdf</button></a>
             </p>
 
             <h2>Principales eventos de React</h2>
@@ -69,19 +111,17 @@
             <p>
                 6. onLoad y onError: Se utilizan en elementos `img` y `script` para manejar eventos de carga y error.
             </p>
-                <p>
-                    <h1>mapa conceptual</h1>
-                    <p><img src="(Inglés) (1).png" width="70%" alt="mapa "></p>
-                </p>
-            
-
+            <p>
+            <h1>mapa conceptual</h1>
+            <p><img src="(Inglés) (1).png" width="70%" alt="mapa "></p>
+            </p>
+            <button class="btn" id="zoom-in-btn">Zoom In</button>
+            <button class="btn" id="zoom-out-btn">Zoom Out</button>
         </div>
     </section>
     <div class="body" id="seccion2">
         <div class="dashboard">
-
-
-            <div class="schedule-table" >
+            <div class="schedule-table">
                 <h2>Cuadro Comparativo entre React y JSX</h2>
                 <table>
                     <tr>
@@ -121,4 +161,4 @@
         </div>
     </div>
     <script src="script.js"></script>
-</body>
+    </body>
